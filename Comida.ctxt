@@ -3,6 +3,6 @@ comment0.params=nombreComida\ cantidadCalorias
 comment0.target=Comida(java.lang.String,\ int)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Comida\r\n
 comment1.params=
-comment1.target=int\ getCantidadCalorias()
+comment1.target=int\ getCalorias()
 comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
 numComments=2

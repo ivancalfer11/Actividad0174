@@ -28,7 +28,7 @@ public class Comida
      * @param  y   a sample parameter for a method
      * @return     the sum of x and y 
      */
-    public int getCantidadCalorias()
+    public int getCalorias()
     {
         return cantidadCalorias;
         

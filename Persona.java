@@ -26,7 +26,7 @@ public class Persona
         this.pesoKilos = pesoKilos;
         this.alturaCm = alturaCm;
         this.edad = edad;
-        caloriasIngeridas = 0;
+        caloriasIngeridas = -1;
         
         
     }
@@ -35,9 +35,15 @@ public class Persona
         return caloriasIngeridas;
        
     }
-    public int comer(Comida newComida){
+    public int comer(Comida comidaADar){
+        int caloriasAIngerir = 0;
+        caloriasAIngerir = comidaADar.getCalorias();
+        caloriasIngeridas = caloriasIngeridas + caloriasAIngerir;
         
-        return caloriasIngeridas;
+        
+        
+        
+        return caloriasAIngerir;
         
     }
 }
