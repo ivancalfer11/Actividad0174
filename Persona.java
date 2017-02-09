@@ -26,7 +26,7 @@ public class Persona
         this.pesoKilos = pesoKilos;
         this.alturaCm = alturaCm;
         this.edad = edad;
-        caloriasIngeridas = -1;
+        caloriasIngeridas = 0;
         
         
     }
@@ -39,11 +39,25 @@ public class Persona
         int caloriasAIngerir = 0;
         caloriasAIngerir = comidaADar.getCalorias();
         caloriasIngeridas = caloriasIngeridas + caloriasAIngerir;
+        int metabolismoBasalH = (10*pesoKilos)+(6*alturaCm)-(5*edad)+5;
+        int metabolismoBasalM = (10*pesoKilos)+(6*alturaCm)-(5*edad)-161;
         
-        
-        
-        
-        return caloriasAIngerir;
+        if (hombre = true){
+            if(metabolismoBasalH <= caloriasIngeridas)
+            {
+               caloriasIngeridas = -1;
+                System.out.println("No quiero mas, Gracias!");
+               
+            }
+        else{
+            if(metabolismoBasalM <= caloriasIngeridas)
+             {
+                caloriasIngeridas = -1;
+                System.out.println("No quiero mas , Gracias!");
+             }
+            }
+        }
+           return caloriasAIngerir;
         
     }
 }
