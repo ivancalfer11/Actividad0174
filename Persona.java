@@ -14,7 +14,7 @@ public class Persona
     private int alturaCm;
     private int edad;
     private int caloriasIngeridas;
-    
+    private int metabolismoBasal;
 
     /**
      * Constructor for objects of class Persona
@@ -27,37 +27,51 @@ public class Persona
         this.alturaCm = alturaCm;
         this.edad = edad;
         caloriasIngeridas = 0;
-        
-        
+        if (hombre = true){
+            metabolismoBasal = (10*pesoKilos)+(6*alturaCm)-(5*edad)+5;
+        }
+        if(hombre = false){
+            metabolismoBasal = (10*pesoKilos)+(6*alturaCm)-(5*edad)-161; 
+        }           
+             
     }
     public int getCaloriasIngeridas()
     {
         return caloriasIngeridas;
        
     }
-    public int comer(Comida comidaADar){
-        int caloriasAIngerir = 0;
-        caloriasAIngerir = comidaADar.getCalorias();
-        caloriasIngeridas = caloriasIngeridas + caloriasAIngerir;
-        int metabolismoBasalH = (10*pesoKilos)+(6*alturaCm)-(5*edad)+5;
-        int metabolismoBasalM = (10*pesoKilos)+(6*alturaCm)-(5*edad)-161;
-        
-        if (hombre = true){
-            if(metabolismoBasalH <= caloriasIngeridas)
-            {
-               caloriasIngeridas = -1;
-                System.out.println("No quiero mas, Gracias!");
-               
-            }
-        else{
-            if(metabolismoBasalM <= caloriasIngeridas)
-             {
-                caloriasIngeridas = -1;
-                System.out.println("No quiero mas , Gracias!");
-             }
-            }
-        }
-           return caloriasAIngerir;
-        
+    public int getMetabolismoBasal(){
+        return metabolismoBasal;
     }
+    public int comer(Comida comidaADar){
+        int comer = -1;
+        int caloriasAIngerir = comidaADar.getCalorias();       
+            if(caloriasAIngerir <= metabolismoBasal){
+               comer = caloriasAIngerir;
+               caloriasIngeridas = caloriasIngeridas + caloriasAIngerir;
+            
+            }
+            else{
+                caloriasAIngerir = -1;
+                System.out.println("no quiero comer más, gracias!!");
+            }
+           return comer;       
+    }
+    public String contestar(String pregunta){
+        String respuesta = " ";
+        if(caloriasIngeridas <= metabolismoBasal){
+            if(pregunta.length() % 3 == 0){
+                respuesta = respuesta + "Si";
+            }
+            else {
+                respuesta = respuesta + "No";
+            }            
+        }
+        if(caloriasIngeridas > metabolismoBasal || pregunta.contains(nombrePersona)){
+            respuesta = pregunta.toUpperCase();
+        }
+        System.out.println(respuesta);
+        return respuesta;
+    }
+    
 }
