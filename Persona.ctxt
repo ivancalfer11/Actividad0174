@@ -1,13 +1,10 @@
 #BlueJ class context
-comment0.params=nombrePersona\ hombre\ pesoKilos\ alturaCm\ edad
+comment0.params=nombre\ esHombre\ peso\ estatura\ edad
 comment0.target=Persona(java.lang.String,\ boolean,\ int,\ int,\ int)
-comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Persona\r\n
-comment1.params=
-comment1.target=int\ getCaloriasIngeridas()
+comment1.params=comida
+comment1.target=int\ comer(Comida)
 comment2.params=
-comment2.target=int\ getMetabolismoBasal()
-comment3.params=comidaADar
-comment3.target=int\ comer(Comida)
-comment4.params=pregunta
-comment4.target=java.lang.String\ contestar(java.lang.String)
-numComments=5
+comment2.target=int\ getCaloriasIngeridas()
+comment3.params=pregunta
+comment3.target=java.lang.String\ contestar(java.lang.String)
+numComments=4
