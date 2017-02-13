@@ -81,7 +81,10 @@ public class Persona
          if(comidaMasCaloricaTomada !=null){
          nombreComidaADevolver = comidaMasCaloricaTomada.getNombre();
         }
-         return comidaMasCaloricaTomada.getNombre();
+        else{
+            System.out.println("Aun no he comido nada");
+        }
+         return nombreComidaADevolver;
      }
  
  
