@@ -12,12 +12,14 @@ import org.junit.Test;
 public class PersonaTest
 {
     private Persona persona1;
-    private Persona persona2;    
+    private Persona persona2;
+    private Persona persona3;
     private Comida comida1;
     private Comida comida2;
     private Comida comida3;
     private Comida comida4;
     private Comida comida5;
+    private Comida comida6;
     
     /**
      * Default constructor for test class PersonaTest
@@ -36,11 +38,13 @@ public class PersonaTest
     {
         persona1 = new Persona("Ana", false, 55, 160, 24);
         persona2 = new Persona("Luis", true, 92, 193, 37);
+        persona3 = new Persona("Pepe", true, 88, 188, 45);
         comida1 = new Comida("Paella", 800);
         comida2 = new Comida("Pizza", 1200);
         comida3 = new Comida("Lentejas", 600);
         comida4 = new Comida("Cocido", 2000);
         comida5 = new Comida("Ensalada", 269);
+        comida6 = new Comida("Macarrones",600);
     }
 
     /**
